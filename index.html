@@ -40,83 +40,10 @@
         <div class="row">
           <div class="col-xl-9 mx-auto">
             <!-- <h1 class="mb-5">ForgetMeNot</h1> -->
-            <img src="img/logo1.png" height="25%" width="auto"></img>
+            <img src="img/logo1.png" class="img-responsive" height="35%"></img>
             <p><h2>An IoT system designed to help you remember to bring everything you need with you.</h2></p>
-            <iframe
-              id="JotFormIFrame-83021113887857"
-              onload="window.parent.scrollTo(0,0)"
-              allowtransparency="true"
-              allowfullscreen="true"
-              allow="geolocation; microphone; camera"
-              src="form.html"
-              frameborder="0"
-              style="width: 1px;
-              min-width: 90%;
-              height:350px;
-              border:none;"
-              scrolling="no"
-            >
-            </iframe>
-            <script type="text/javascript">
-              var ifr = document.getElementById("JotFormIFrame-83021113887857");
-              if(window.location.href && window.location.href.indexOf("?") > -1) {
-                var get = window.location.href.substr(window.location.href.indexOf("?") + 1);
-                if(ifr && get.length > 0) {
-                  var src = ifr.src;
-                  src = src.indexOf("?") > -1 ? src + "&" + get : src  + "?" + get;
-                  ifr.src = src;
-                }
-              }
-              window.handleIFrameMessage = function(e) {
-                if (typeof e.data === 'object') { return; }
-                var args = e.data.split(":");
-                if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-                if (!iframe) { return; }
-                switch (args[0]) {
-                  case "scrollIntoView":
-                    iframe.scrollIntoView();
-                    break;
-                  // case "setHeight":
-                  //   iframe.style.height = args[1] + "px";
-                  //   break;
-                  case "collapseErrorPage":
-                    if (iframe.clientHeight > window.innerHeight) {
-                      iframe.style.height = window.innerHeight + "px";
-                    }
-                    break;
-                  case "reloadPage":
-                    window.location.reload();
-                    break;
-                  case "loadScript":
-                    var src = args[1];
-                    if (args.length > 3) {
-                        src = args[1] + ':' + args[2];
-                    }
-                    var script = document.createElement('script');
-                    script.src = src;
-                    script.type = 'text/javascript';
-                    document.body.appendChild(script);
-                    break;
-                  case "exitFullscreen":
-                    if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-                    else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-                    else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-                    else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-                    else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-                    break;
-                }
-                var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-                if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-                  var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-                  iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-                }
-              };
-              if (window.addEventListener) {
-                window.addEventListener("message", handleIFrameMessage, false);
-              } else if (window.attachEvent) {
-                window.attachEvent("onmessage", handleIFrameMessage);
-              }
-              </script>
+            <br></br>
+            <p><a href="form.html"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" class="img-responsive" width=20%></img></a></p>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form>
@@ -185,14 +112,14 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/car_key.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/door.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Easy to Use &amp; Customizable</h2>
             <p class="lead mb-0">The smart tray automatically detects and registers items by weight, but it also allows you to name your items and leave notes if you want to!</p>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/door.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/car_key.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Natural Audio Reminders</h2>
             <p class="lead mb-0">Like a family or friend, your door talks to you if you forget to bring something with you, before you leave the house.</p>
@@ -232,7 +159,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
+    <section class="bg-white text-white text-center">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -253,8 +180,8 @@
                 frameborder="0"
                 style="width: 1px;
                 min-width: 90%;
-                height:350px;
-                border:none;"
+                height:570px;
+                border:#ffffff;"
                 scrolling="no"
               >
               </iframe>
